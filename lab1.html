@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Лабораторна №1 — Основи HTML — Ім'я Прізвище</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* Прості стилі для читабельності (за бажанням) */
+    body { font-family: Arial, sans-serif; padding: 20px; max-width: 800px; margin: auto; }
+    .form-group { margin-bottom: 12px; }
+    label { display:block; margin-bottom:4px; }
+    input, select { padding:8px; width:100%; box-sizing:border-box; }
+    .error { color:#b00; display:none; margin-top:6px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Лабораторна №1 — Реєстрація</h1>
+    <!-- Змініть href на вашу сторінку зі списком лабораторних -->
+    <nav><a href="labs.html">← Список лабораторних</a></nav>
+  </header>
+
+  <main>
+    <!-- ВАЖЛИВО: замініть "ВАШ-UNIQUE-URL" на URL з webhook.site -->
+    <form id="regForm" action="https://webhook.site/419eafd4-fbc3-4d56-8ea8-4f37c5c27a12" method="POST" autocomplete="on">
+      <fieldset>
+        <legend>Дані реєстрації</legend>
+
+        <div class="form-group">
+          <label for="first_name">Ім'я *</label>
+          <input id="first_name" name="first_name" type="text" required autocomplete="given-name" />
+        </div>
+
+        <div class="form-group">
+          <label for="last_name">Прізвище *</label>
+          <input id="last_name" name="last_name" type="text" required autocomplete="family-name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email *</label>
+          <input id="email" name="email" type="email" required autocomplete="email" />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Пароль *</label>
+          <input id="password" name="password" type="password" required minlength="6" autocomplete="new-password" />
+        </div>
+
+        <div class="form-group">
+          <label for="confirm_password">Підтвердження паролю *</label>
+          <input id="confirm_password" name="confirm_password" type="password" required minlength="6" autocomplete="new-password" />
+          <div id="pwError" class="error" role="alert" aria-live="assertive">Паролі не співпадають.</div>
+        </div>
+
+        <!-- Додаткові поля (на вибір) -->
+        <div class="form-group">
+          <label for="dob">Дата народження</label>
+          <input id="dob" name="dob" type="date" />
+        </div>
+
+        <div class="form-group">
+          <label for="gender">Стать</label>
+          <select id="gender" name="gender">
+            <option value="">-- виберіть --</option>
+            <option value="female">Жіноча</option>
+            <option value="male">Чоловіча</option>
+            <option value="other">Інша</option>
+            <option value="no">Не вказувати</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <input type="submit" value="Зареєструватися" />
+        </div>
+
+      </fieldset>
+    </form>
+  </main>
+
+  <script>
+    // Простий client-side скрипт: перевіряє, що паролі співпадають
+    document.getElementById('regForm').addEventListener('submit', function(e) {
+      var pw = document.getElementById('password').value;
+      var cpw = document.getElementById('confirm_password').value;
+      var err = document.getElementById('pwError');
+
+      if (pw !== cpw) {
+        e.preventDefault();               // зупинити відправку форми
+        err.style.display = 'block';
+        document.getElementById('confirm_password').focus();
+      } else {
+        err.style.display = 'none';
+        // Форма відправиться на webhook.site (POST) і ви побачите дані в інтерфейсі webhook.site
+      }
+    });
+  </script>
+</body>
+</html>
