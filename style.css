@@ -11,8 +11,9 @@ body {
 /* Контейнер */
 .container {
     max-width: 1000px;
-    margin: 0 auto;
     padding: 0 20px;
+    display: block;
+    margin: 0; /* прибрати центровані відступи */
 }
 
 /* Шапка */
@@ -74,6 +75,8 @@ main h2 {
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+     text-align: left; /* вирівнювання тексту */
+    margin-left: 0;   /* прибрати автоматичні відступи зліва */
 }
 
 .practice-works a {
@@ -109,3 +112,6 @@ img {
     max-width: 100%;       /* адаптивне фото */
     height: auto;
 }
+
+
+
