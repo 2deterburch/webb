@@ -1,0 +1,111 @@
+/* Загальні стилі */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #171616;
+    background-color: #ffffef;
+}
+
+/* Контейнер */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Шапка */
+.site-header {
+    background: #ffffef; /* жовтий фон */
+    color: #000000;      /* чорний текст */
+    padding: 20px 0;
+}
+
+.site-header h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+/* Навігація */
+.nav {
+    list-style: none;          /* прибрати кружечки */
+    display: flex;             /* розташувати елементи в ряд */
+    gap: 75px;                 /* відстань між кнопками */
+    padding-bottom: 10px;      /* щоб лінія не прилипала */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-container {
+    width: 100%;               /* на всю ширину */
+    border-bottom: 2px solid black;  /* чорна лінія */
+}
+
+
+.nav li a {
+    text-decoration: none;  /* прибрати підкреслення */
+    color: #000000;            /* колір тексту */
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.nav li a:hover {
+    color: #fdd32e;  /* колір при наведенні */
+}
+/* Основний контент */
+main h2 {
+    margin-top: 25px;
+    font-size: 24px;
+    color: #000000;
+}
+
+.about-me {
+    text-align: left;
+}
+.practice-works ul {
+    list-style: none;
+    padding: 0;
+}
+
+.practice-works li {
+    background: #ffffef;
+    margin-bottom: 15px;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.practice-works a {
+    font-weight: bold;
+    color: #000000;
+    text-decoration: none;
+}
+
+.practice-works a:hover {
+    text-decoration: underline;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* висота на весь екран */
+}
+
+main {
+    flex: 1; /* займає весь простір */
+}
+
+.site-footer {
+    background: #000000;
+    color: #ffffef;
+    text-align: center;
+    padding: 20px;
+}
+
+img {
+    border-radius: 10px;  /* закруглені кути */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* тінь */
+    max-width: 100%;       /* адаптивне фото */
+    height: auto;
+}
