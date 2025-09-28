@@ -1,5 +1,5 @@
 /* Загальні стилі для сторінки */
-.body {
+body {
     font-family: 'Montserrat', sans-serif;
     background-color: #ffffef;
     color: #171616;
@@ -25,10 +25,18 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Контейнер для форми */
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh; /* форма центрується у вікні */
+}
+
 /* Стиль форми */
 form {
     max-width: 500px;
-    margin: 0 auto;
+    width: 100%; 
     padding: 30px;
     background-color: #ffffef;
     border-radius: 12px;
