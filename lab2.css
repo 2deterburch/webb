@@ -56,7 +56,7 @@ li:nth-child(even) {
 
 /* 12. input[type="text"]:not(:disabled) */
 input[type="text"]:not(:disabled) {
-    background-color: lightgrey;
+    background-color: lightblue;
 }
 
 /* 13. <p> перші дочірні */

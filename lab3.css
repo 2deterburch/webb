@@ -1,0 +1,249 @@
+/* ===== Загальні стилі ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", Arial, sans-serif;
+  background-color: #0f0f0f;
+  color: #f1f1f1;
+}
+
+/* ===== Верхня панель ===== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 56px;
+  padding: 0 16px;
+  background-color: #202020;
+  border-bottom: 1px solid #303030;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-icon {
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  font-size: 18px;
+}
+
+.play-icon {
+  color: #ff0000;
+  font-size: 22px;
+  margin-right: 4px;
+}
+
+.country {
+  font-size: 10px;
+  color: #aaa;
+  margin-left: 4px;
+}
+
+.header-center {
+  display: flex;
+  align-items: center;
+  flex: 1;
+  justify-content: center;
+  max-width: 600px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 8px 12px;
+  border: 1px solid #303030;
+  border-radius: 20px 0 0 20px;
+  background-color: #121212;
+  color: #f1f1f1;
+}
+
+.search-btn {
+  background: #303030;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 0 20px 20px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.icon-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== Основна частина ===== */
+.main {
+  display: flex;
+  height: calc(100vh - 56px);
+}
+
+/* ===== Бокова панель ===== */
+.sidebar {
+  width: 230px;
+  background: #181818;
+  border-right: 1px solid #303030;
+  padding: 12px 0;
+  overflow-y: auto;
+}
+
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  padding: 10px 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.menu li:hover,
+.menu li.active {
+  background: #303030;
+  border-radius: 8px;
+}
+
+.sidebar h4 {
+  font-size: 13px;
+  margin: 10px 20px;
+  color: #aaa;
+}
+
+.sidebar hr {
+  border: none;
+  height: 1px;
+  background: #303030;
+  margin: 8px 0;
+}
+
+/* ===== Контент ===== */
+.content {
+  flex: 1;
+  padding: 16px 24px;
+  overflow-y: auto;
+}
+
+/* ===== Категорії ===== */
+.categories {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.category {
+  background: #303030;
+  border: none;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.category.active,
+.category:hover {
+  background: #f1f1f1;
+  color: #000;
+}
+
+/* ===== Відео сітка ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.video-card {
+  background: transparent;
+  cursor: pointer;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 180px;
+  background: #303030;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.thumb1 {
+  background-image: url("https://i.ytimg.com/vi/FNNtK5XzXrY/hq720.jpg?sqp=-oaymwE7CK4FEIIDSFryq4qpAy0IARUAAAAAGAElAADIQj0AgKJD8AEB-AH-CYAC0AWKAgwIABABGHIgTSg9MA8=&rs=AOn4CLBx8VqoNxsJ6bqaX38KrFGuC5FUsg");
+}
+
+.thumb2 {
+  background-image: url("https://images.theconversation.com/files/45159/original/rptgtpxd-1396254731.jpg?ixlib=rb-4.1.0&q=45&auto=format&w=754&fit=clip");
+}
+
+.thumb3 {
+  background-image: url("https://i.ytimg.com/vi/W1IQ0z2AqXw/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLC2Gnn9tt-2SWWMU0QRytwtYXorqA");
+}
+
+.thumb4 {
+  background-image: url("https://i.pinimg.com/736x/b2/6a/69/b26a692acd87f8cd2ee14b5d6d4226ef.jpg");
+}
+
+.video-info {
+  display: flex;
+  gap: 10px;
+}
+
+.channel-icon {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+}
+
+.video-text {
+  flex: 1;
+}
+
+.video-title {
+  font-size: 15px;
+  color: #fff;
+  margin-bottom: 5px;
+}
+
+.video-channel {
+  font-size: 13px;
+  color: #aaa;
+}
+
+.video-meta {
+  font-size: 12px;
+  color: #777;
+}

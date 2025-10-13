@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone</title>
+    <link rel="stylesheet" href="lab3.css" />
+  </head>
+  <body>
+    <!-- ===== Верхня панель ===== -->
+    <header class="header">
+      <div class="header-left">
+        <div class="menu-icon">☰</div>
+        <div class="logo">
+          <span class="play-icon">▶</span> <strong>YouTube</strong>
+          <span class="country">UA</span>
+        </div>
+      </div>
+
+      <div class="header-center">
+        <input type="text" class="search-input" placeholder="Пошук" />
+        <button class="search-btn">🔍</button>
+      </div>
+
+      <div class="header-right">
+        <button class="icon-btn">⬆️</button>
+        <button class="icon-btn">🔔</button>
+        <div class="user-avatar">👤</div>
+      </div>
+    </header>
+
+    <!-- ===== Основна частина ===== -->
+    <div class="main">
+      <!-- Бокова панель -->
+      <aside class="sidebar">
+        <ul class="menu">
+          <li class="active">🏠 Головна</li>
+          <li>🎬 YouTube Shorts</li>
+          <li>📺 Підписки</li>
+        </ul>
+
+        <hr />
+
+        <ul class="menu">
+          <li>🕓 Історія</li>
+          <li>🎥 Ваші відео</li>
+          <li>💾 Переглянути пізніше</li>
+          <li>👍 Вподобані</li>
+        </ul>
+
+        <hr />
+
+        <h4>Підписки</h4>
+        <ul class="menu">
+          <li>👨‍💻 WebDev UA</li>
+          <li>🎮 GamePlay</li>
+          <li>🎵 Music Box</li>
+        </ul>
+      </aside>
+
+      <!-- Контент -->
+      <section class="content">
+        <!-- Категорії -->
+        <div class="categories">
+          <button class="category active">Усі</button>
+          <button class="category">Музика</button>
+          <button class="category">Підкасти</button>
+          <button class="category">Література</button>
+          <button class="category">Ігри</button>
+          <button class="category">Новини</button>
+          <button class="category">Кулінарія</button>
+          <button class="category">Пряма трансляція</button>
+        </div>
+
+        <!-- Сітка відео -->
+        <div class="video-grid">
+          <div class="video-card">
+            <div class="thumbnail thumb1"></div>
+            <div class="video-info">
+              <img
+                src="https://via.placeholder.com/36"
+                alt=""
+                class="channel-icon"
+              />
+              <div class="video-text">
+                <h3 class="video-title">
+                  playlist for studying
+                </h3>
+                <p class="video-channel">Ophelia Wilde</p>
+                <p class="video-meta">2,9 млн переглядів • 1 рік тому</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="thumbnail thumb2"></div>
+            <div class="video-info">
+              <img
+                src="https://via.placeholder.com/36"
+                alt=""
+                class="channel-icon"
+              />
+              <div class="video-text">
+                <h3 class="video-title">
+                  10 best books🍂
+                </h3>
+                <p class="video-channel">SANAMS BOOK DIARIES</p>
+                <p class="video-meta">101 тис. переглядів • 9 днів тому</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="thumbnail thumb3"></div>
+            <div class="video-info">
+              <img
+                src="https://via.placeholder.com/36"
+                alt=""
+                class="channel-icon"
+              />
+              <div class="video-text">
+                <h3 class="video-title"> Workout </h3>
+                <p class="video-channel">Lia Fitnes</p>
+                <p class="video-meta">18 тис. переглядів • 3 дні тому</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="video-card">
+            <div class="thumbnail thumb4"></div>
+            <div class="video-info">
+              <img
+                src="https://via.placeholder.com/36"
+                alt=""
+                class="channel-icon"
+              />
+              <div class="video-text">
+                <h3 class="video-title"> Banana bread recipe </h3>
+                <p class="video-channel">Cooking with Bree</p>
+                <p class="video-meta">12 млн переглядів • 2 роки тому</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
