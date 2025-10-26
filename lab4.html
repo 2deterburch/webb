@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Лабораторна робота №4 — Планер</title>
+
+  <!-- Підключення кастомного шрифту -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Підключення CSS -->
+  <link rel="stylesheet" href="lab4.css">
+</head>
+<body>
+  <div class="planner">
+    <header>
+      <h1>WEEKLY PLAN</h1>
+      <div class="meta">
+        <label>Week of: <input type="text" placeholder="дата"></label>
+        <label>Healthy habit: <input type="text" placeholder="звичка"></label>
+        <div class="checks">
+          <label><input type="checkbox"> Rocked it</label>
+          <label><input type="checkbox"> Room for improvement</label>
+        </div>
+      </div>
+    </header>
+
+    <aside class="todo">
+      <h2>To Do</h2>
+      <div class="section">
+        <h3>Top 3 goals</h3>
+        <ul>
+          <li><input type="checkbox"><input type="text" placeholder="Ціль 1"></li>
+          <li><input type="checkbox"><input type="text" placeholder="Ціль 2"></li>
+          <li><input type="checkbox"><input type="text" placeholder="Ціль 3"></li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>Everything else</h3>
+        <ul>
+          <li><input type="checkbox"><input type="text" placeholder="Завдання"></li>
+          <li><input type="checkbox"><input type="text" placeholder="Завдання"></li>
+          <li><input type="checkbox"><input type="text" placeholder="Завдання"></li>
+        </ul>
+      </div>
+      <div class="section">
+        <h3>Next week</h3>
+        <textarea placeholder="Плани на наступний тиждень..."></textarea>
+      </div>
+    </aside>
+
+    <main class="week">
+      <div class="day"><h3>Monday</h3><textarea></textarea></div>
+      <div class="day"><h3>Tuesday</h3><textarea></textarea></div>
+      <div class="day"><h3>Wednesday</h3><textarea></textarea></div>
+      <div class="day"><h3>Thursday</h3><textarea></textarea></div>
+      <div class="day"><h3>Friday</h3><textarea></textarea></div>
+      <div class="day small"><h3>Saturday</h3><textarea></textarea></div>
+      <div class="day small"><h3>Sunday</h3><textarea></textarea></div>
+    </main>
+  </div>
+
+  <footer>
+    <p>Розроблено для навчання · <a href="https://gptonline.ai/" target="_blank">gptonline.ai</a></p>
+  </footer>
+</body>
+</html>
