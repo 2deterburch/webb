@@ -7,73 +7,96 @@
     <link rel="stylesheet" href="pr5.css">
 </head>
 <body>
+
     <header class="header">
         <div class="container">
-            <h1 class="logo">Моє Портфоліо</h1>
+            <h1 class="logo">Лавріненко Аліна</h1>
             <nav class="nav">
-                <a href="#about">Про мене</a>
-                <a href="#projects">Проєкти</a>
-                <a href="#contact">Контакти</a>
+                <a href="about.html">Про мене</a>
+                <a href="practice.html">Практичні роботи</a>
+                <a href="labs.html">Лабораторні роботи</a>
             </nav>
         </div>
     </header>
 
+    <!-- HERO -->
     <section class="hero">
-        <div class="container">
+        <div class="container hero-container">
             <div class="hero-text">
-                <h2>Привіт, я <span>Тоні</span></h2>
-                <p>Фронтенд-розробник, який створює сучасні та зручні вебсайти.</p>
-                <a href="#projects" class="btn">Переглянути роботи</a>
+                <h2>Привіт, я <span>Аліна</span></h2>
+                <p>Студентка групи ТЦР-22. На цьому сайті зібрані всі лабораторні та практичні з дисципліни "Веб-технології та веб-дизайн"</p>
+                <a href="labs.html" class="btn">Переглянути всі лабораторні</a>
+                <a href="practice.html" class="btn">Переглянути всі практичні</a>
             </div>
+
             <div class="hero-image">
-                <img src="" alt="Моє фото"> 
+                <img src="https://i.ibb.co/VpCJxhv2/2025-12-05-225818900.png" alt="Фото Аліни">
             </div>
         </div>
     </section>
+    <section class="labs-works">
+<div class="container">
+        <h2 class="section-title">Лабораторні роботи</h2>
 
-    <section id="about" class="about">
-        <div class="container">
-            <h2>Про мене</h2>
-            <p>Я починаюча веброзробниця, яка прагне створювати стильні, адаптивні та швидкі сайти! 
-               Мені подобається експериментувати з дизайном, HTML, CSS і JavaScript, щоб поєднати функціональність і естетику.</p>
+        <div class="card-wrapper">
+
+            <div class="card">
+                <div class="card-title"><a href="lab1.html" class="btn">Лабораторна робота №1 — Основи HTML</a></div>
+                <div class="card-text">Створити форму для заповнення даних реєстрації.</div>
+                <div class="card-date">Вересень, 2025</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><a href="lab2.html" class="btn">Лабораторна робота №2 — Основи CSS</a></div>
+                <div class="card-text">Оформити сторінку з використанням CSS.</div>
+                <div class="card-date">Вересень, 2025</div>
+            </div>
+
+            <div class="card">
+                <div class="card-title"><a href="lab3.html" class="btn">Лабораторна робота №3 — Основи CSS</a></div>
+                <div class="card-text">Створити копію структури головної сторінки YouTube використовуючи FlexBox.</div>
+                <div class="card-date">Вересень, 2025</div>
+            </div>
+
         </div>
+    </div>
     </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2>Мої проєкти</h2>
-            <div class="project-list">
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Проєкт 1">
-                    <h3>Сайт-візитка</h3>
-                    <p>Мій перший навчальний сайт у стилі мінімалізму.</p>
-                </div>
-                <div class="project-card">
-                    <img src="https://via.placeholder.com/300x200" alt="Проєкт 2">
-                    <h3>Онлайн-магазин</h3>
-                    <p>Прототип інтернет-магазину з каталогом товарів.</p>
-                </div>
+    <!-- PROJECTS -->
+    <section>
+<div class="container" style="margin-top: 40px;">
+        <h2 class="section-title">Практичні роботи</h2>
+
+        <div class="practice-card">
+            <div>
+                <div class="tag" style="background:#1c74e9;">HTML</div>
+                <div class="card-title">Практична робота №1</div>
+                <div class="card-text">Основи створення вебсторінки.</div>
             </div>
         </div>
-    </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2>Контакти</h2>
-            <p>Напиши мені на <a href="mailto:example@gmail.com">example@gmail.com</a></p>
-            <div class="socials">
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
-                <a href="#">GitHub</a>
+        <div class="practice-card" style="margin-top: 20px;">
+            <div>
+                <div class="tag" style="background:#1c74e9;">CSS</div>
+                <div class="card-title">Практична робота №4</div>
+                <div class="card-text">Розміщення контенту та робота з каскадними стилями.</div>
             </div>
         </div>
+
+    </div>
     </section>
 
+    <!-- FOOTER -->
     <footer class="footer">
+          <div class="container">
+            <h3>Контакти</h3>
+            <p><a href="mailto:st8993442@stud.duikt.edu.ua">st8993442@stud.duikt.edu.ua</a></p>
+
+            <div class="socials">
+                <a href="https://www.linkedin.com/in/аліна-лавріненко-703a88336/">LinkedIn</a>
+                <a href="https://github.com/2deterburch">GitHub</a>
+            </div>
         <p>© 2025 Моє портфоліо</p>
     </footer>
-
-    <a href="https://www.figma.com/community/file/1202571021924309053/Portfolio-UI---Web--Mobile"
-       class="figma-link" target="_blank">Figma Template</a>
 </body>
 </html>

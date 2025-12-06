@@ -1,87 +1,107 @@
-/* Загальні стилі */
-body {
-    font-family: 'Montserrat', sans-serif;
+/* ---------------------- */
+/*      БАЗОВІ СТИЛІ      */
+/* ---------------------- */
+
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+} 
+
+body {
+    background: #f5f6f8;
+    color: #222;
     line-height: 1.6;
-    color: #171616;
-    background-color: #ffffef;
 }
 
-/* Контейнер */
 .container {
-    max-width: 1000px;
-    padding: 0 20px;
-    display: block;
-    margin: 0; /* прибрати центровані відступи */
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-/* Шапка */
-.site-header {
-    background: #ffffef; /* жовтий фон */
-    color: #000000;      /* чорний текст */
+
+/* ---------------------- */
+/*         ХЕДЕР          */
+/* ---------------------- */
+
+header {
+    background: white;
     padding: 20px 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+    margin-bottom: 30px;
 }
 
-.site-header h1 {
-    margin: 0;
-    font-size: 36px;
+header h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 /* Навігація */
-.nav {
-    list-style: none;          /* прибрати кружечки */
-    display: flex;             /* розташувати елементи в ряд */
-    gap: 75px;                 /* відстань між кнопками */
-    padding-bottom: 10px;      /* щоб лінія не прилипала */
-    margin: 0;
-    padding: 0;
-}
-
 .nav-container {
-    width: 100%;               /* на всю ширину */
-    border-bottom: 2px solid black;  /* чорна лінія */
+    margin-top: 10px;
+}
+
+.nav {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #444;
+    font-weight: 600;
+    transition: .2s;
+}
+
+.nav a:hover {
+    color: #0066ff;
 }
 
 
-.nav li a {
-    text-decoration: none;  /* прибрати підкреслення */
-    color: #000000;            /* колір тексту */
-    font-weight: bold;
-    transition: 0.3s;
+/* ---------------------- */
+/*     СПИСКИ РОБІТ       */
+/* ---------------------- */
+
+.practice-works h2 {
+    font-size: 26px;
+    margin-bottom: 20px;
 }
 
-.nav li a:hover {
-    color: #fdd32e;  /* колір при наведенні */
-}
-/* Основний контент */
-main h2 {
-    margin-top: 25px;
-    font-size: 24px;
-    color: #000000;
-}
-
-.about-me {
-    text-align: left;
-}
+/* Список */
 .practice-works ul {
     list-style: none;
-    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
 }
 
+/* КАРТКА РОБОТИ */
 .practice-works li {
-    background: #ffffef;
-    margin-bottom: 15px;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-     text-align: left; /* вирівнювання тексту */
-    margin-left: 0;   /* прибрати автоматичні відступи зліва */
+    background: white;
+    padding: 20px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+    transition: 0.2s;
+}
+
+.practice-works li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.12);
 }
 
 .practice-works a {
-    font-weight: bold;
-    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0066ff;
     text-decoration: none;
 }
 
@@ -89,29 +109,46 @@ main h2 {
     text-decoration: underline;
 }
 
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* висота на весь екран */
+.practice-works p {
+    color: #555;
+    margin-top: 6px;
 }
 
-main {
-    flex: 1; /* займає весь простір */
-}
+
+/* ---------------------- */
+/*         ФУТЕР          */
+/* ---------------------- */
 
 .site-footer {
-    background: #000000;
-    color: #ffffef;
+    background: #fff;
+    margin-top: auto;
+    padding: 20px 0;
     text-align: center;
-    padding: 20px;
+    border-top: 1px solid #ddd;
 }
 
-img {
-    border-radius: 10px;  /* закруглені кути */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* тінь */
-    max-width: 100%;       /* адаптивне фото */
-    height: auto;
+.site-footer a {
+    color: #0066ff;
+    text-decoration: none;
+}
+
+.site-footer a:hover {
+    text-decoration: underline;
 }
 
 
+/* ---------------------- */
+/*     АДАПТИВНІСТЬ       */
+/* ---------------------- */
 
+@media (min-width: 700px) {
+    .practice-works ul {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1000px) {
+    .practice-works ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}

@@ -1,0 +1,66 @@
+:root{
+  /* Підстав ім'я файлу спрайта, який ти збережеш */
+  --sprite-url: url('mewsprites.png');
+
+  /* Скільки кадрів у рядку (цей sheet має 6 кадрів) */
+  --frames: 6;
+
+  /* Швидкість анімації кадрів */
+  --walk-duration: 0.7s;
+}
+
+/* --- базова сцена --- */
+*{box-sizing:border-box}
+body{ margin:0; min-height:100vh; display:flex; align-items:center; justify-content:center; font-family:system-ui; background:#cfeaff }
+.scene{ width:900px; height:380px; position:relative; border-radius:10px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.12); background:linear-gradient(#87ceeb,#bde0ff) }
+.ground{ position:absolute; left:0; right:0; bottom:0; height:90px; background:linear-gradient(#6bbf4a,#4ca033); z-index:1 }
+
+/* --- персонаж (використовуємо percent-based трюк) --- */
+.character{
+  position:absolute;
+  bottom:22px;
+  left:40px;
+  width:72px;   /* вказане відображуване розмір елемента; можна змінити */
+  height:72px;
+  z-index:3;
+
+  /* спрайт */
+  background-image: var(--sprite-url);
+  background-repeat: no-repeat;
+
+  /*
+    КЛЮЧ:
+    background-size: (frames * 100%) 100% — розтягуємо strip в ширину (frames × 100%),
+    тому кожний кадр займає 100% ширини елемента.
+  */
+  background-size: calc(var(--frames) * 100%) 100%;
+  background-position: 0 0;
+  image-rendering: pixelated;
+}
+
+/* анімація кадрів: рух background-position від 0% до 100% кроками steps(frames) */
+.character.walking{
+  animation:
+    spriteFrames var(--walk-duration) steps(var(--frames)) infinite,
+    moveRight 6s linear infinite;
+}
+
+/* при 'idle' - перший кадр */
+.character.idle{ animation:none; background-position: 0 0; }
+
+/* keyframes: з 0% (0%) до 100% (100%) — steps подбає про кроки */
+@keyframes spriteFrames{
+  to { background-position: 100% 0; }
+}
+
+/* додатковий рух сценою — персонаж іде праворуч і повертається */
+@keyframes moveRight{
+  0%{ transform: translateX(0) scaleX(1) }
+  48%{ transform: translateX(calc(900px - 72px - 80px)) scaleX(1) }
+  50%{ transform: translateX(calc(900px - 72px - 80px)) scaleX(-1) } /* повернення */
+  100%{ transform: translateX(0) scaleX(-1) }
+}
+
+/* кнопки */
+.controls{ position:absolute; top:12px; right:12px; display:flex; gap:8px; z-index:6 }
+.controls button{ padding:8px 10px; border-radius:8px; border:none; background:white; box-shadow:0 2px 6px rgba(0,0,0,0.12); cursor:pointer; font-weight:600 }

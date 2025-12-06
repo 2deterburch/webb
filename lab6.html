@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="uk">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Лабораторна — Mew sprite animation</title>
+  <link rel="stylesheet" href="lab6.css">
+</head>
+<body>
+  <div class="scene" aria-label="Анімація М'ю">
+    <div class="sky"></div>
+    <div class="ground"></div>
+
+    <!-- Персонаж (спрайт) -->
+    <div id="character" class="character idle" aria-hidden="false" title="Mew"></div>
+
+    <!-- Кнопки керування -->
+    <div class="controls">
+      <button id="btnStart">Старт</button>
+      <button id="btnStop">Стоп</button>
+      <button id="btnFlip">Перевернути</button>
+    </div>
+  </div>
+
+<script>
+  const char = document.getElementById('character');
+  document.getElementById('btnStart').onclick = () => { char.classList.remove('idle'); char.classList.add('walking'); };
+  document.getElementById('btnStop').onclick = () => { char.classList.remove('walking'); char.classList.add('idle'); };
+  document.getElementById('btnFlip').onclick = () => {
+    const t = getComputedStyle(char).transform || '';
+    if (t.includes('-1')) char.style.transform = '';
+    else char.style.transform = 'scaleX(-1)';
+  };
+</script>
+</body>
+</html>
