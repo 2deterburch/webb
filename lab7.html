@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Новорічна листівка</title>
+    <link rel="stylesheet" href="lab7.css">
+</head>
+<body>
+
+<div class="decor decor--top"></div>
+<div class="decor decor--bottom"></div>
+
+<div class="snow"></div>
+
+<audio id="music" src="song.mp3" preload="auto"></audio>
+
+<button class="music-btn">🎵 Увімкнути музику</button>
+
+<main class="page">
+    <section class="card card--holiday">
+        <header class="card__header">
+            <h1 class="card__title">З Новим Роком! 🎄</h1>
+            <p class="card__subtitle">Нехай це свято принесе радість, тепло та здійснення мрій.</p>
+        </header>
+
+        <div class="card__body">
+            <p class="card__text">
+                Бажаю чудових моментів, затишку, міцного здоров’я та магії у кожному дні!
+            </p>
+            <img src="christmas_tree.png" alt="Ялинка" class="greeting__img">
+        </div>
+
+    </section>
+</main>
+
+<script>
+    const music = document.getElementById("music");
+    const btn = document.querySelector(".music-btn");
+
+    btn.addEventListener("click", () => {
+        if (music.paused) {
+            music.play();
+            btn.textContent = "⏸ Зупинити музику";
+        } else {
+            music.pause();
+            btn.textContent = "🎵 Увімкнути музику";
+        }
+    });
+</script>
+
+</body>
+</html>
+

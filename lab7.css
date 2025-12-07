@@ -1,0 +1,307 @@
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #07210f url("background3.jpg") repeat;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ====== МУЗИКА ====== */
+.music-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: #c8102e;
+    color: white;
+    z-index: 100;
+    transition: 0.3s;
+}
+.music-btn:hover { filter: brightness(1.15); }
+
+/* ====== ДЕКОРИ (іграшки зверху і подарунки знизу) ====== */
+
+.decor {
+    position: fixed;
+    width: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* іграшки зверху */
+.decor--top {
+    top: 0;
+    height: 160px;
+    background: url("https://i.imgur.com/B3Tx1uE.png") repeat-x;
+    background-size: 350px auto;
+    animation: swing 5s ease-in-out infinite alternate;
+}
+
+/* подарунки знизу */
+.decor--bottom {
+    bottom: 0;
+    height: 200px;
+    background: url("gifts.png") repeat-x;
+    background-size: 420px auto;
+}
+
+/* хитання іграшок */
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1deg); }
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    font-family: "Helvetica Neue", Arial, sans-serif;
+    background: #07210f url("background3.jpg") repeat;
+    color: #fff;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* ====== МУЗИКА ====== */
+.music-btn {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    padding: 0.7rem 1rem;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    background: #c8102e;
+    color: white;
+    z-index: 100;
+    transition: 0.3s;
+}
+.music-btn:hover { filter: brightness(1.15); }
+
+/* ====== ДЕКОРИ (іграшки зверху і подарунки знизу) ====== */
+
+.decor {
+    position: fixed;
+    width: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+/* іграшки зверху */
+.decor--top {
+    top: 0;
+    height: 200px;
+    background: url("balls.png") repeat-x;
+    background-size: 350px auto;
+    animation: swing 5s ease-in-out infinite alternate;
+}
+
+/* подарунки знизу */
+.decor--bottom {
+    bottom: 0;
+    height: 200px;
+    background: url("gifts.png") repeat-x;
+    background-size: 420px auto;
+}
+
+/* хитання іграшок */
+@keyframes swing {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(1deg); }
+}
+
+
+
+@keyframes snowfall {
+    0% {
+        background-position: 
+            0 0,
+            0 0,
+            0 0;
+    }
+    100% {
+        background-position:
+            200px 700px,   /* Перша — дрібна, повільна */
+            120px 500px,   /* Друга — середня */
+            -150px 350px;  /* Третя — найдрібніша */
+    }
+}
+
+/* ====== ОСНОВНИЙ КОНТЕНТ ====== */
+.page {
+    min-height: 100vh;
+    padding: 3rem 1rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* ====== КАРТКА ====== */
+.card {
+    width: min(700px, 95vw);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 20;
+}
+
+.card--holiday {
+    background: linear-gradient(180deg, #284929, #183a25);
+    border: 3px solid #c8102e;
+    box-shadow: 0 0 30px rgba(200,16,46,0.4);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
+    100% { box-shadow: 0 0 30px rgba(0,255,0,0.5); }
+}
+
+.card__title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.card__subtitle {
+    color: #e8f5e9;
+    font-size: 1.1rem;
+}
+
+.card__text {
+    margin-top: 1rem;
+    max-width: 60ch;
+    color: #eaf7ea;
+}
+
+.greeting__img {
+    width: 180px;
+    margin-top: 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ====== КНОПКИ ====== */
+.button {
+    padding: 0.7rem 1.1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.button--primary {
+    background: #c8102e;
+    color: white;
+}
+
+.button--primary:hover { filter: brightness(1.15); }
+
+.button--outline {
+    border: 2px solid #fff;
+    background: transparent;
+    color: white;
+}
+
+.button--outline:hover { background: rgba(255,255,255,0.1); }
+
+
+/* ====== ОСНОВНИЙ КОНТЕНТ ====== */
+.page {
+    min-height: 100vh;
+    padding: 3rem 1rem 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* ====== КАРТКА ====== */
+.card {
+    width: min(700px, 95vw);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    z-index: 20;
+}
+
+.card--holiday {
+    background: linear-gradient(180deg, #2b5138, #172f20);
+    border: 3px solid #c8102e;
+    box-shadow: 0 0 30px rgba(200,16,46,0.4);
+    animation: glow 3s infinite alternate;
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 15px rgba(255,0,0,0.3); }
+    100% { box-shadow: 0 0 30px rgba(0,255,0,0.5); }
+}
+
+.card__title {
+    font-size: 2.5rem;
+    color: #fff;
+}
+
+.card__subtitle {
+    color: #e8f5e9;
+    font-size: 1.1rem;
+}
+
+.card__text {
+    margin-top: 1rem;
+    max-width: 60ch;
+    color: #eaf7ea;
+}
+
+.greeting__img {
+    width: 180px;
+    margin-top: 1rem;
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+/* ====== КНОПКИ ====== */
+.button {
+    padding: 0.7rem 1.1rem;
+    border-radius: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: 0.2s;
+}
+
+.button--primary {
+    background: #c8102e;
+    color: white;
+}
+
+.button--primary:hover { filter: brightness(1.15); }
+
+.button--outline {
+    border: 2px solid #fff;
+    background: transparent;
+    color: white;
+}
+
+.button--outline:hover { background: rgba(255,255,255,0.1); }
