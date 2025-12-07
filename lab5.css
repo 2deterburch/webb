@@ -1,3 +1,4 @@
+/* Скидання стилів */
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +10,9 @@ body {
     background: #eef6ff;
     color: #222;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
 .container {
@@ -24,7 +28,7 @@ img {
 
 /* ---------------- ХЕДЕР ---------------- */
 .header {
-    padding: 20px 0;
+    padding: 25px 0 10px;
     background: white;
     box-shadow: 0 2px 10px rgba(0,0,0,0.05);
     position: sticky;
@@ -34,24 +38,37 @@ img {
 
 .header .container {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
 }
 
+.logo {
+    font-size: 26px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.nav {
+    display: flex;
+    gap: 25px;
+}
+
 .nav a {
-    margin-left: 20px;
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    padding: 6px 10px;
+    border-radius: 6px;
 }
 
 .nav a:hover {
+    background: #e8f0ff;
     color: #1a73e8;
 }
 
 /* ---------------- HERO ---------------- */
 .hero {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .hero-container {
@@ -76,6 +93,12 @@ img {
     margin-bottom: 20px;
 }
 
+/* КНОПКИ — ДОДАНО ВІДСТУП */
+.hero-text .btn {
+    display: inline-block;
+    margin: 8px 0;
+}
+
 .btn {
     padding: 12px 25px;
     background: #1a73e8;
@@ -97,42 +120,12 @@ img {
     background: #dce9ff;
 }
 
-/* ======= GLOBAL ======= */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background: #eaf1fb;
-    color: #111;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Контейнер */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-/* Заголовки секцій */
-.section-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-/* ======= GRID ДЛЯ КАРТОК ======= */
-
-.cards-grid {
+/* -------- LAB CARDS -------- */
+.card-wrapper {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 20px;
 }
-
-/* ======= КАРТКИ ======= */
 
 .card {
     background: #fff;
@@ -148,167 +141,52 @@ body {
     box-shadow: 0 6px 22px rgba(0,0,0,0.12);
 }
 
-.card-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #1a73e8;
-}
-
-.card-desc {
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 6px;
-}
-
-.card-date {
-    font-size: 12px;
-    color: #777;
-}
-
-/* ======= GLOBAL ======= */
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Inter', sans-serif;
-    background: #eaf1fb;
-    color: #111;
+/* ---------- ПРАКТИЧНІ ---------- */
+.practice-card {
     display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
-
-/* Контейнер */
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 40px auto;
-}
-
-/* Заголовки секцій */
-.section-title {
-    font-size: 28px;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
-/* ======= GRID ДЛЯ КАРТОК ======= */
-
-.cards-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 20px;
-}
-
-/* ======= КАРТКИ ======= */
-
-.card {
     background: #fff;
-    border-radius: 14px;
-    padding: 20px;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    transition: 0.2s ease;
-    border-left: 6px solid #1a73e8;
+    border-radius: 15px;
+    padding: 18px;
+    gap: 15px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 6px 22px rgba(0,0,0,0.12);
+.practice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0,0,0,0.10);
 }
 
-.card-title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 8px;
-    color: #1a73e8;
-}
-
-.card-desc {
-    font-size: 14px;
-    color: #444;
-    margin-bottom: 6px;
-}
-
-.card-date {
+.tag {
+    display: inline-block;
+    background: #1c74e9;
+    color: #fff;
+    padding: 2px 8px;
     font-size: 12px;
-    color: #777;
-}
-
-/* ------------ ПРАКТИЧНІ ------------- */
-
-        .practice-card {
-            display: flex;
-            background: #fff;
-            border-radius: 15px;
-            padding: 15px;
-            gap: 15px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
-            transition: 0.3s;
-        }
-
-        .practice-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 6px 25px rgba(0,0,0,0.10);
-        }
-
-        .practice-card img {
-            width: 120px;
-            height: 80px;
-            object-fit: cover;
-            border-radius: 10px;
-        }
-
-        .tag {
-            display: inline-block;
-            background: #ff6767;
-            color: #fff;
-            padding: 2px 8px;
-            font-size: 12px;
-            border-radius: 6px;
-            margin-bottom: 5px;
-        }
-
-/* ======= FOOTER ALWAYS DOWN ======= */
-
-footer {
-    margin-top: auto;
-    padding: 20px 0;
-    text-align: center;
-    color: #555;
-    background: #dce6f7;
+    border-radius: 6px;
+    margin-bottom: 5px;
 }
 
 /* ======= FOOTER ALWAYS DOWN ======= */
-
 footer {
     margin-top: auto;
-    padding: 20px 0;
+    padding: 22px 0;
     text-align: center;
     color: #555;
     background: #dce6f7;
-}
-
-
-/* --------------- FIXED BUTTON ---------- */
-.figma-link {
-    position: fixed;
-    right: 20px;
-    bottom: 20px;
-    background: #1a73e8;
-    padding: 12px 18px;
-    color: white;
-    border-radius: 30px;
-    text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-}
-
-.figma-link:hover {
-    background: #145cbc;
 }
 
 /* ------------- АДАПТИВ --------------- */
 @media (max-width: 850px) {
+
+    /* ХЕДЕР */
+    .nav {
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 5px;
+        text-align: center;
+    }
+
     .hero-container {
         flex-direction: column;
         text-align: center;
@@ -317,5 +195,10 @@ footer {
     .hero-image {
         width: 250px;
         height: 250px;
+    }
+
+    .hero-text .btn {
+        width: 100%;
+        margin: 10px 0;
     }
 }
